@@ -68,16 +68,24 @@
         </figure>
         <div class="card-body px-3 text-center">
           <h2 class="card-title items-center justify-center ">Rectangle</h2>
-          <p>Area (A) = w   x  I</p>
+          <p class=" ">Area (A) = w   x  I</p>
           <div class="flex space-x-1">
-            <input class="w-20 p-2 h-8 rounded-md" placeholder="W" type="text">
+            <!-- rectanlge input of width -->
+            <input id="rectangle_width" class="bg-slate-400 placeholder:text-white w-20 p-2 h-8 rounded-md" placeholder="W" type="text">
             <span>cm</span>
 
-            <input class="w-20 p-2 h-8 rounded-md" placeholder="I" type="text">
+            <!-- rectangle INPUT OF length -->
+            <input id="rectangle_length" class="bg-slate-400 placeholder:text-white w-20 p-2 h-8 rounded-md" placeholder="L" type="text">
             <span>cm</span>
           </div>
+
+          <div class="rounded-lg border-slate-500 border-2">
+            <p>Area: <span id="rect_result" ></span> <span>cm<sup>2</sup></span></p>
+          </div>
+<!-- onclick="rectangle_result()" -->
+
           <div class="card-actions justify-end">
-            <button class="btn btn-primary w-full">Calculate</button>
+            <button onclick="rectangle_calulate_btn()" id="rectangle_calulate_btn" class="btn btn-primary w-full">Calculate</button>
           </div>
         </div>
       </div>
@@ -155,8 +163,7 @@
     }
   </script>
 
-  <script src="scripts/triangle.js">
-
-  </script>
+  <script src="scripts/triangle.js"></script>
+  <script src="scripts/rectangle.js"></script>
 </body>
 </html>
