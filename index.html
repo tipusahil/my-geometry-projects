@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Calculator</title>
+
+    <!-- tainwind & daisyUi cdn linkup -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="p-8">
+
+<!--1. header start here -->
+ <header>
+
+
+
+ </header>
+ <!-- header end here -->
+
+
+<!--2. main start here -->
+ <main class="flex w-full   space-y-5 gap:5 flex-col lg:flex-row justify-center">
+
+
+<!-- shape container start here-->
+<div class="shape_container  col-span-2 flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 border-2">
+
+    <!-- 1. traingle card -->
+    <div class="card bg-base-100 shadow-xl border-2">
+        <figure class="p-5">
+          <img
+            src="images/triangle.png"
+            alt="Shoes" />
+        </figure>
+        <div class="card-body px-3 text-center">
+          <h2 class="card-title items-center justify-center ">Triangle</h2>
+          <p>Area (A) = 0.5 x b x h</p>
+  
+          <div class="flex space-x-1">
+
+            <!-- triangle  base input -->
+            <input id="triangle_baseInput" class="bg-slate-400 placeholder:text-white w-20 p-2 h-8 rounded-md" placeholder="b" type="text">
+            <span>cm</span>
+
+            <!-- triangle  hight input -->
+            <input id="triangle_hightInput" class="bg-slate-400 placeholder:text-white w-20 p-2 h-8 rounded-md" placeholder="h" type="text">
+            <span>cm</span>
+          </div>
+
+          <!-- for output of triangle result's div -->
+           <div class="rounded-lg border-slate-500 border-2">
+            <p>Area: <span id="result_box"></span> <span>cm<sup>2</sup></span></p>
+           </div>
+          <div class="card-actions justify-end">
+            <button onclick="trianlgeCalculate()" class="btn btn-primary w-full">Calculate</button>
+          </div>
+        </div>
+      </div>
+
+    <!-- 2. rectangle  card -->
+    <div class="card bg-base-100 shadow-xl border-2">
+        <figure class="p-5">
+          <img
+            src="images/rectangle.png"
+            alt="Shoes" />
+        </figure>
+        <div class="card-body px-3 text-center">
+          <h2 class="card-title items-center justify-center ">Rectangle</h2>
+          <p>Area (A) = w   x  I</p>
+          <div class="flex space-x-1">
+            <input class="w-20 p-2 h-8 rounded-md" placeholder="W" type="text">
+            <span>cm</span>
+
+            <input class="w-20 p-2 h-8 rounded-md" placeholder="I" type="text">
+            <span>cm</span>
+          </div>
+          <div class="card-actions justify-end">
+            <button class="btn btn-primary w-full">Calculate</button>
+          </div>
+        </div>
+      </div>
+
+    <!-- 3. parallelogram card -->
+    <div class="card bg-base-100 shadow-xl border-2">
+        <figure class="p-5">
+          <img
+            src="images/parallelogram.png"
+            alt="Shoes" />
+        </figure>
+        <div class="card-body px-3 text-center">
+          <h2 class="card-title items-center justify-center ">Parallelogram</h2>
+
+          <p>Area (A) = b  x  h</p>
+          <p>b=10cm, h=12cm</p>
+          <!-- <div class="flex space-x-1">
+            <input class="w-20 p-2 h-8 rounded-md" placeholder="b" type="text">
+            <span>cm</span>
+
+            <input class="w-20 p-2 h-8 rounded-md" placeholder="b" type="text">
+            <span>cm</span>
+          </div> -->
+          <div class="card-actions justify-end">
+            <button class="btn btn-primary w-full">Calculate</button>
+          </div>
+        </div>
+      </div>
+
+
+</div>
+<!-- shape container end here-->
+
+
+
+<!-- area calculator container start here -->
+ <div class="w-full lg:w-96 h-96 border-2 border-gray-700 p-5 rounded-md text-center text-3xl text-black area_calculator_container">
+<h1>Area Calculation</h1>
+<h2  class=" border-gray-600 rounded-lg p-3"></h2>
+<!-- id="result_box" -->
+ </div>
+<!-- area calculator container end here -->
+
+
+
+
+ </main>
+ <!-- main end here -->
+
+
+
+<!--3. footer start here -->
+ <footer>
+
+ </footer>
+ <!-- footer end here -->
+
+
+
+
+
+
+
+
+    <!-- tailwind er custom css dewar jonno js linkup -->
+      <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+
+  <script src="scripts/triangle.js">
+
+  </script>
+</body>
+</html>
