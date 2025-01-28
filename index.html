@@ -24,12 +24,13 @@
  <main class="flex w-full   space-y-5 gap:5 flex-col lg:flex-row justify-center">
 
 
+
 <!-- shape container start here-->
 <div class="shape_container  col-span-2 flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 border-2">
 
     <!-- 1. traingle card -->
-    <div class="card bg-base-100 shadow-xl border-2">
-        <figure class="p-5">
+    <div class="card bg-base-100 shadow-xl border-2 hover:bg-[#fea1fb5e]">
+        <figure class="p-5"> 
           <img
             src="images/triangle.png"
             alt="Shoes" />
@@ -60,7 +61,7 @@
       </div>
 
     <!-- 2. rectangle  card -->
-    <div class="card bg-base-100 shadow-xl border-2">
+    <div class="card bg-base-100 shadow-xl border-2 hover:bg-[#70bffc7f]">
         <figure class="p-5">
           <img
             src="images/rectangle.png"
@@ -85,11 +86,12 @@
 <!-- onclick="rectangle_result()" -->
 
           <div class="card-actions justify-end">
-            <button onclick="rectangle_calulate_btn()" id="rectangle_calulate_btn" class="btn btn-primary w-full">Calculate</button>
+            <button onclick="rectangle_calulate_btn()" id="rectangle_calulate_btn" class="btn btn-primary bg-[#ccccff] text-black w-full">Calculate</button>
           </div>
         </div>
       </div>
 
+ 
     <!-- 3. parallelogram card -->
     <div class="card bg-base-100 shadow-xl border-2">
         <figure class="p-5">
@@ -98,23 +100,108 @@
             alt="Shoes" />
         </figure>
         <div class="card-body px-3 text-center">
-          <h2 class="card-title items-center justify-center ">Parallelogram</h2>
+          <h2 class="card-title  justify-center ">Parallelogram</h2>
 
           <p>Area (A) = b  x  h</p>
           <p>b=10cm, h=12cm</p>
-          <!-- <div class="flex space-x-1">
-            <input class="w-20 p-2 h-8 rounded-md" placeholder="b" type="text">
+          <div class="flex space-x-1">
+            <input id="pera_base_input" class="bg-slate-400 placeholder:text-white text-white w-20 p-2 h-8 rounded-md" placeholder="b" type="text">
             <span>cm</span>
 
-            <input class="w-20 p-2 h-8 rounded-md" placeholder="b" type="text">
+            <input id="pera_hight_input" class=" bg-slate-400 placeholder:text-white  w-20 p-2 h-8 rounded-md" placeholder="h" type="text">
             <span>cm</span>
-          </div> -->
+          </div>
+          <div class="flex w-full border-2 border-slate-500 rounded-lg">
+            <p>Area: <span id="pera_result"></span><span>cm</span><sup>2</sup></p>
+            
+          </div>
+
           <div class="card-actions justify-end">
-            <button class="btn btn-primary w-full">Calculate</button>
+            <button id="Parallel_calcuate_btn" class="btn btn-success text-white bg-[#95ea77] w-full">Calculate</button>
           </div>
         </div>
       </div>
 
+
+<!--card 4 rombos -->
+<div class="card bg-base-100  shadow-xl">
+  <figure class="p-5">
+    <img
+      src="images/rhombus.png"
+      alt="Shoes" />
+  </figure>
+  <div class="card-body justify-center text-center">
+    <h2 class="card-title justify-center">Rhombus</h2>
+    <p>Area (A) = 0.5 x d<sub>1</sub> x d<sub>2</sub> </p>
+    <p>d<sub>1</sub> = 16cm d<sub>2</sub> = 8cm</p>
+
+    <div class="flex space-x-1">
+      <input id="rombos_d1_input" class="bg-slate-400 placeholder:text-white text-white w-20 p-2 h-8 rounded-md" placeholder="b" type="text">
+      <span>cm</span>
+
+      <input id="rombos_d2_input" class=" bg-slate-400 placeholder:text-white  w-20 p-2 h-8 rounded-md" placeholder="h" type="text">
+      <span>cm</span>
+    </div>
+
+    <div  class="w-full rounded-lg border-2 border-slate-400">rombos result is : <span id="output"></span></div>
+    <div class="card-actions justify-end">
+      <button onclick="rombos_calculate_btn()" class="btn btn-primary w-full">Calculate</button>
+    </div>
+  </div>
+</div>
+<!--card 5 Pentagon -->
+<div class="card bg-base-100  shadow-xl">
+  <figure class="p-5">
+    <img
+      src="images/pentagon.png"
+      alt="Shoes" />
+  </figure>
+  <div class="card-body justify-center text-center">
+    <h2 class="card-title justify-center">Pentagon</h2>
+    <p>Area (A) = 0.5 x p x b</p>
+
+
+    <div class="flex space-x-1">
+      <input id="pentagon_p_input" class="bg-slate-400 placeholder:text-white text-white w-20 p-2 h-8 rounded-md" placeholder="p" type="text">
+      <span>cm</span>
+
+      <input id="pentagon_b_input" class=" bg-slate-400 placeholder:text-white  w-20 p-2 h-8 rounded-md" placeholder="b" type="text">
+      <span>cm</span>
+    </div>
+
+    <div  class="w-full rounded-lg border-2 border-slate-400">Area Result is: <span id="pentagon_result">0</span></div>
+    <div class="card-actions justify-end">
+      <button onclick="pentagon_calculate_btn()" class="btn btn-primary w-full">Calculate</button>
+    </div>
+  </div>
+</div>
+
+<!--card 6 ellipse -->
+<div class="card bg-base-100  shadow-xl">
+  <figure class="p-5">
+    <img
+      src="images/ellipse.png"
+      alt="Shoes" />
+  </figure>
+  <div class="card-body justify-center text-center">
+    <h2 class="card-title justify-center">Ellipse</h2>
+
+<p>Area (A) = π ab</p>
+
+    <div class="flex space-x-1">
+      <input id="ellipse_a_input" class="bg-slate-400 placeholder:text-white text-white w-20 p-2 h-8 rounded-md" placeholder="a" type="text">
+      <span>cm</span>
+
+      <input id="ellipse_b_input" class=" bg-slate-400 placeholder:text-white  w-20 p-2 h-8 rounded-md" placeholder="b" type="text">
+      <span>cm</span>
+    </div>
+
+    <div  class="w-full rounded-lg border-2 border-slate-400">rombos result is : <span id="output"></span></div>
+    <div class="card-actions justify-end">
+      <button onclick="ellipse_calculateBTN()" class="btn btn-primary w-full">Calculate</button>
+    </div>
+  </div>
+</div>
 
 </div>
 <!-- shape container end here-->
@@ -122,10 +209,9 @@
 
 
 <!-- area calculator container start here -->
- <div class="w-full lg:w-96 h-96 border-2 border-gray-700 p-5 rounded-md text-center text-3xl text-black area_calculator_container">
+ <div id="result_box"  class="w-full lg:w-96 h-96 border-2 border-gray-700 p-5 rounded-md text-center text-3xl text-black area_calculator_container">
 <h1>Area Calculation</h1>
 <h2  class=" border-gray-600 rounded-lg p-3"></h2>
-<!-- id="result_box" -->
  </div>
 <!-- area calculator container end here -->
 
@@ -165,5 +251,8 @@
 
   <script src="scripts/triangle.js"></script>
   <script src="scripts/rectangle.js"></script>
+  <script src="scripts/perallalogram.js"></script>
+  <script src="scripts/reuse_function.js"></script>
+  <script src="scripts/pentagon.js"></script>
 </body>
 </html>
