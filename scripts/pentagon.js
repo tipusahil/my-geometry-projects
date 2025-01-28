@@ -34,3 +34,15 @@ function setInputValueInTAG(set_id_tag, calculate){
     return set_value_tag;
 }
 
+
+
+// jekuno id name k value hisebe pass korlei hoye jabe.uporer gulo templete. nise ta just call kore value pass korar maddome function gulo reuse able kora hoise.
+
+function ellipse_calculateBTN(){
+    const a = getinputTagByID('ellipse_a_input');
+    const b = getinputTagByID('ellipse_b_input');
+
+    const area = Math.PI * a * b ;
+
+    setInputValueInTAG('ellipse_output_set_tag' , area);
+}
